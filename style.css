@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #FCE9D7, #E3E1F2);
+
+}
+/* .................Hero-section start.................................... */
+.hero-section {
+  background-color: rgba(23, 41, 55, 1);
+  padding: 0.001px 0;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  font-size: 0.9rem;
+}
+.logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+.menu {
+  display: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.7rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+nav a:hover {
+  color: rgb(243, 112, 33);
+}
+nav button {
+  background-color: transparent;
+  color: white;
+  padding: 0.2rem 1.7rem;
+  border-radius: 5px;
+  border-color: rgb(243, 112, 33);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.mobile-resume {
+  display: none;
+  background-color: transparent;
+  color: white;
+  padding: 0.2rem 1.7rem;
+  border-radius: 5px;
+  border-color: rgb(243, 112, 33);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -150px;
+  width: 150px;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  transition: left 0.3s ease-in-out;
+  color: black;
+  background: linear-gradient(135deg, #fce9d7, #c8c3f5);
+}
+
+.sidebar.active {
+  right: 0;
+  display: block;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar ul li {
+  font-size: 18px;
+  margin-left: 1rem;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+.sidebar ul li a:hover {
+  color: rgb(243, 112, 33);
+}
+
+.sidebar button {
+  background: none;
+  margin-bottom: 1.5rem;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  margin-left: 1rem;
+}
+.hero-container {
+  max-width: 1400px;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.hero-image {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 15px;
+}
+.hero-text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+.hero-image img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.hero-text {
+  color: white;
+}
+.hero-text h1 {
+  font-size: 2.7rem;
+}
+.hero-text .para-one {
+  font-size: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+.highlight {
+  color: rgb(243, 112, 33);
+  font-weight: bold;
+}
+.hero-text .para-two {
+  font-size: 1rem;
+  width: 80%;
+  color: gray;
+  line-height: 1.5;
+}
+
+@media (max-width: 1050px) {
+  nav {
+    display: none;
+  }
+  .mobile-resume {
+    display: block;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .hero-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+  .hero-image img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .hero-text {
+    color: white;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text .para-one {
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+  }
+  .highlight {
+    color: rgb(243, 112, 33);
+    font-weight: bold;
+  }
+  .hero-text .para-two {
+    font-size: 1rem;
+    width: 90%;
+    color: gray;
+  }
+}
+
+@media (max-width: 956px) {
+  .hero-container {
+    margin-top: 1rem;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 0.5rem;
+  }
+  .hero-text {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .para-two {
+    width: 80%;
+    text-align: center;
+  }
+}
+@media (max-width: 680px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0.5rem;
+  }
+  nav a {
+    font-size: 0.8rem;
+  }
+  .mobile-resume {
+    font-size: 1rem;
+    padding: 0.1rem 1rem;
+  }
+  .menu i {
+    font-size: 1.4rem;
+  }
+  .hero-image img{
+    max-width: 250px;
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+/* .................Hero-section start.................................... */
+/* .....Some common styles..... */
+.container {
+    max-width: 1350px;
+    margin: 3rem auto;
+  }
+  .section-header{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .description{
+    text-align: center;
+    color: gray;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+/* .....Some common styles..... */
+.skill-section{
+    padding: 0 1rem;
+}
+.skill {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1),  
+  0 6px 12px rgba(0, 0, 0, 0.08);
+
+  background: white;
+}
+.skill-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid orange;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: white;
+}
+.skill-box i {
+  margin-right: 8px;
+}
+.linked{
+    background-color:rgb(243, 112, 33) ;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    max-width: 200px;
+    width:100%;
+    margin:auto;
+    border-radius: 5px;
+    padding:0.8rem 1rem;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .linked{
+      padding:0.5rem 1rem;
+        font-size: 1rem;
+    }
+  }
+
+/* ................................progress section start....................................... */
+.progress-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+.card {
+    max-width: 300px;
+    width:100%;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: white;
+}
+.card .video-placeholder {
+    background: #ccc;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    
+}
+.card .content {
+    padding: 15px;
+    margin-bottom: 0.2rem;
+}
+.card .day {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 0.2rem;
+}
+.card .topic {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+.card .coach {
+    font-size: 14px;
+    color: gray;
+}
+@media (max-width: 768px) {
+   .card{
+         max-width: 600px;
+         width:100%;
+   }
+   .project-box{
+ 
+    width:100%;
+   }
+}
+/* ................................progress section end....................................... */
+
+/* ................................Project section start....................................... */
+.project-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+    padding: 0 1rem;
+}
+.project-box{
+    max-width: 300px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: white;
+
+}
+.project-box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.project-content{
+    padding:0 0.9rem;
+}
+.project-content h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color:rgb(243, 112, 33) ;
+
+}
+.project-content p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.project-content p strong {
+    color: #333;
+    font-size: 16px;
+}
+.last{
+    margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    .project-box{
+    max-width: 600px;
+     width:100%;
+    }
+ }
+
+/* ................................Project section end....................................... */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+}
+.education-section{
+    padding: 0 1rem;
+}
+.education-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.education-box p {
+    margin: 5px 0;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.duration {
+    font-size: 14px;
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.education-box p:last-child {
+    color: #444;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+@media (max-width: 800px) {
+    .education-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* ................................contact section start....................................... */
+footer{
+    background-color: rgb(23, 41, 55);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.color-contact{
+    margin-top: 2rem;
+    color: rgb(243, 112, 33);
+}
+.social-container {
+    margin-top: -0.5rem;
+    display: flex;
+    gap: 15px;
+    background-color: #1e293b;
+}
+
+.social-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 2px solid #e67e22;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.social-box:hover {
+    background-color: #e67e22;
+    color: #1e293b;
+}
+
+.social-box img {
+    width: 20px;
+    height: 20px;
+}
+@media (max-width: 568px) {
+    .social-container{
+        flex-direction: column;
+    }
+}
