@@ -363,6 +363,7 @@ nav button {
     align-items: center;
     justify-content: center;
     color: red;
+    margin-bottom: 1rem;
     
 }
 .card .content {
